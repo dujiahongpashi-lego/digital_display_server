@@ -63,10 +63,10 @@ export default function IndexPage() {
 
   setInterval(async () => {
     data = await getData();
-    // if (isConneted){
-    //   legoDevice.writeValueWithoutResponse('data');
-    // }
-  }, 20000)
+    if (isConneted){
+      legoDevice.writeValueWithoutResponse('data');
+    }
+  }, 5000) // 5000 / 10000
 
   const refresh = async () => {
     data = await getData();
